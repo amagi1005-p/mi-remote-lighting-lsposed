@@ -14,17 +14,10 @@ Mi リモート **7.1.3G** に隠されている赤外線リモコンの **「�
 
 ※ Mi Home全体や端末の地域設定は変更しません。すべての機器・メーカー・ROMでの動作を保証するものではありません。
 
-## ダウンロード
-
-**[v1.0.0 リリースページ](https://github.com/amagi1005-p/mi-remote-lighting-lsposed/releases/tag/v1.0.0)**
-
-- [署名済みAPK（v2実装）](https://github.com/amagi1005-p/mi-remote-lighting-lsposed/releases/download/v1.0.0/IRLightLSPosed-MiRemote-7.1.3G-v1.0.0.apk)
-- [SHA-256チェックサム](releases/SHA256SUMS.txt)
-
 ## インストール
 
 1. **Mi リモート 7.1.3G** と動作する **LSPosed** を用意します。
-2. リリースページからAPKをダウンロードし、インストールします。
+2. [v1.0.0リリースページ](https://github.com/amagi1005-p/mi-remote-lighting-lsposed/releases/tag/v1.0.0)からAPKをダウンロードし、インストールします。
 3. LSPosedで **IR Light LSPosed** を有効化し、適用先を **Mi リモート**（`com.duokan.phone.remotecontroller`）だけに指定します。
 4. Mi リモートを強制停止して開き直します（必要に応じて端末を再起動）。
 5. 「リモコンを追加」から **電球／照明** を選択し、メーカーとリモコンパターンを探して動作を確認します。
