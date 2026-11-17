@@ -8,8 +8,8 @@ An LSPosed compatibility module that reveals the built-in **Lighting / Bulb** in
 
 - **First public release: v1.0.0** (based on the user-tested v2 implementation)
 - Confirmed to reveal the Lighting/Bulb category in Mi Remote's Add Remote screen
-- A user has reported successfully switching off a room light via infrared
-- **Reported to work with Vector**, although individual configurations and versions have not been independently verified
+- Infrared room-light control has been demonstrated
+- **Also works with Vector**; individual configurations and versions have not been independently verified
 - Hooks **Mi Remote 7.1.3G** (`com.duokan.phone.remotecontroller`) only
 
 **Note:** This module does not modify Mi Home or device-wide region settings. Compatibility with other Mi Remote versions, custom ROMs, and appliance brands is not guaranteed.
