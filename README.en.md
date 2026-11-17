@@ -14,17 +14,10 @@ An LSPosed compatibility module that reveals the built-in **Lighting / Bulb** in
 
 **Note:** This module does not modify Mi Home or device-wide region settings. Compatibility with other Mi Remote versions, custom ROMs, and appliance brands is not guaranteed.
 
-## Download
-
-**[v1.0.0 GitHub Release](https://github.com/amagi1005-p/mi-remote-lighting-lsposed/releases/tag/v1.0.0)**
-
-- [Signed APK (v2 implementation)](https://github.com/amagi1005-p/mi-remote-lighting-lsposed/releases/download/v1.0.0/IRLightLSPosed-MiRemote-7.1.3G-v1.0.0.apk)
-- [SHA-256 checksums](releases/SHA256SUMS.txt)
-
 ## Installation
 
 1. Install **Mi Remote 7.1.3G** and ensure **LSPosed** is working.
-2. Download and install the signed APK from the release page.
+2. Download and install the signed APK from the [v1.0.0 release page](https://github.com/amagi1005-p/mi-remote-lighting-lsposed/releases/tag/v1.0.0).
 3. Enable **IR Light LSPosed** in LSPosed and select only **Mi Remote** (`com.duokan.phone.remotecontroller`) as the scope.
 4. Force-stop and reopen Mi Remote (reboot if your setup requires it).
 5. Open **Add Remote → Lighting / Bulb**, select your appliance brand and try the available remote profiles.
