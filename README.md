@@ -12,13 +12,13 @@ This LSPosed module enables the built-in **lighting / bulb (device type ID 14)**
 
 ## Download / ダウンロード
 
-- The signed v2 APK has not yet been uploaded to this repository. It is available as a conversation attachment to the project author.
-- [SHA-256 checksum of the signed v2 APK](releases/SHA256SUMS.txt)
+- [Signed v2 APK / 署名済みAPK](releases/IRLightLSPosed-MiRemote-7.1.3G-v2.apk)
+- [SHA-256 checksum](releases/SHA256SUMS.txt)
 
 ## How to use / 導入
 
 1. Install Mi Remote **7.1.3G** and have a working LSPosed environment.
-2. Install the signed v2 module APK obtained from the project author.
+2. Download and install `releases/IRLightLSPosed-MiRemote-7.1.3G-v2.apk`.
 3. In LSPosed, enable **IR Light LSPosed** and scope it to **Mi Remote** (`com.duokan.phone.remotecontroller`) only.
 4. Force-stop Mi Remote and open it again (reboot if your LSPosed manager requires it).
 5. Open the Add Remote menu and look for **電球 / Lighting**.
