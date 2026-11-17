@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/migrate-to-v1.0.0.yml'
+      - 'docs/RELEASE_NOTES.md'
   workflow_dispatch:
 
 permissions:
