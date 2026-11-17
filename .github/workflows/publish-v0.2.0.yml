@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Verify signed APK checksum
-        run: sha256sum --check releases/SHA256SUMS.txt
+        run: cd releases && sha256sum --check SHA256SUMS.txt
 
       - name: Create GitHub Release and attach APK
         env:
@@ -29,4 +29,4 @@ jobs:
             echo "Release v0.2.0 already exists."
             exit 0
           fi
-          gh release create v0.2.0             releases/IRLightLSPosed-MiRemote-7.1.3G-v2.apk             --title "v0.2.0 - Mi Remote 7.1.3G Lighting"             --notes "Mi Remote 7.1.3G向けLSPosedモジュール。隠れている電球・照明カテゴリ (ID 14) を表示します。カテゴリ表示と赤外線による照明操作の動作報告があります。LSPosedの適用先は com.duokan.phone.remotecontroller のみ。ほかのバージョンや機器は未検証です。"             --target "${GITHUB_SHA}"
+          gh release create v0.2.0             releases/IRLightLSPosed-MiRemote-7.1.3G-v2.apk             --title "v0.2.0 - Mi Remote 7.1.3G Lighting"             --notes "Mi Remote 7.1.3G向けLSPosedモジュール。隠れている電球・照明カテゴリ (ID 14) を表示します。カテゴリ表示と赤外線による照明操作の動作報告があります。Vectorでも利用可能との報告があります（構成ごとの動作保証はありません）。LSPosedの適用先は com.duokan.phone.remotecontroller のみ。ほかのバージョンや機器は未検証です。"             --target "${GITHUB_SHA}"
