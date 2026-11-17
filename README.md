@@ -1,44 +1,50 @@
-# Mi Remote Lighting — LSPosed Module
+# Mi Remote Lighting — LSPosedモジュール
 
-Xiaomi **Mi Remote 7.1.3G** に、通常のデバイス一覧では非表示になっている赤外線リモコンの「電球 / Lighting」（機器種別 **ID 14**）を表示するLSPosedモジュールです。
+**言語 / Language: [日本語](README.md) | [English](README.en.md)**
 
-This LSPosed module enables the built-in **lighting / bulb (device type ID 14)** category in Xiaomi **Mi Remote 7.1.3G**.
+Mi リモート **7.1.3G** に隠されている赤外線リモコンの **「電球／照明」カテゴリ（機器タイプID: 14）** を表示するLSPosedモジュールです。
 
-## Status / 動作状況
+## 対応状況
 
-- **v2 (0.2.0)**: User-tested: the Lighting/Bulb category appeared. An additional user report says an IR room light could be turned off using the category.
-- **Vector**: Vectorでも使用できるとの報告あり（community-reported compatibility; exact build and device combination not independently verified）.
-- Scope is limited to Mi Remote (`com.duokan.phone.remotecontroller`). **Does not modify Mi Home**, the whole-device region, or the Android IR HAL.
-- **Not verified on every ROM, version, brand, or device**. Other versions of Mi Remote may use different classes/methods. No warranty that Toshiba lighting protocols or every IR database record will work.
+- **初回公開版: v1.0.0**（動作確認されたv2実装を公開）
+- Mi リモートの機器追加画面に「電球」が表示されたことを確認
+- 赤外線で室内照明を消せたという利用者報告あり
+- **Vectorでも利用できるとの報告あり**（環境・バージョン別の検証は未実施）
+- 対象は **Mi リモート 7.1.3G**（`com.duokan.phone.remotecontroller`）のみ
 
-## Download / ダウンロード
+※ Mi Home全体や端末の地域設定は変更しません。すべての機器・メーカー・ROMでの動作を保証するものではありません。
 
-- [Signed v2 APK / 署名済みAPK](releases/IRLightLSPosed-MiRemote-7.1.3G-v2.apk)
-- [SHA-256 checksum](releases/SHA256SUMS.txt)
+## ダウンロード
 
-## How to use / 導入
+**[v1.0.0 リリースページ](https://github.com/amagi1005-p/mi-remote-lighting-lsposed/releases/tag/v1.0.0)**
 
-1. Install Mi Remote **7.1.3G** and have a working LSPosed environment.
-2. Download and install `releases/IRLightLSPosed-MiRemote-7.1.3G-v2.apk`.
-3. In LSPosed, enable **IR Light LSPosed** and scope it to **Mi Remote** (`com.duokan.phone.remotecontroller`) only.
-4. Force-stop Mi Remote and open it again (reboot if your LSPosed manager requires it).
-5. Open the Add Remote menu and look for **電球 / Lighting**.
-6. Choose the corresponding brand/model and test it while pointing the device's IR blaster at the appliance.
+- [署名済みAPK（v2実装）](https://github.com/amagi1005-p/mi-remote-lighting-lsposed/releases/download/v1.0.0/IRLightLSPosed-MiRemote-7.1.3G-v2.apk)
+- [SHA-256チェックサム](releases/SHA256SUMS.txt)
 
-If the category is absent, look at the LSPosed log for `[IRLightLSPosed]`.
+## インストール
 
-## How it works / 仕組み
+1. **Mi リモート 7.1.3G** と動作する **LSPosed** を用意します。
+2. リリースページからAPKをダウンロードし、インストールします。
+3. LSPosedで **IR Light LSPosed** を有効化し、適用先を **Mi リモート**（`com.duokan.phone.remotecontroller`）だけに指定します。
+4. Mi リモートを強制停止して開き直します（必要に応じて端末を再起動）。
+5. 「リモコンを追加」から **電球／照明** を選択し、メーカーとリモコンパターンを探して動作を確認します。
 
-The module hooks Mi Remote's `DKDeviceType` support check and the returned category lists in `AddDeviceActivityV52` / `MiUIAddDeviceActivityV52`, after application filtering. If an existing category ID 14 is present, it keeps it. Otherwise, it inserts a fallback Lighting category entry.
+表示されない場合は、LSPosedログの `[IRLightLSPosed]` を確認してください。
 
-This **reveals an existing category; it does not add IR protocols**. Mi Remote's local/online IR codes and the custom ROM's IR transmitter support are separate requirements.
+## 動作の仕組み
 
-## Build / ビルド
+Mi リモート内部の `DKDeviceType` のサポート判定と、`AddDeviceActivityV52` / `MiUIAddDeviceActivityV52` のカテゴリ一覧生成処理にフックします。アプリの絞り込み後に照明カテゴリ（ID 14）が存在しなければ追加します。
 
-Open the repository in Android Studio with an Android SDK 35 installation, JDK 17+, and Gradle compatible with Android Gradle Plugin 8.7.3, then build `:app:assembleDebug`.
+**赤外線コードを新規追加するわけではありません。** 赤外線コードの有無や、カスタムROMのIR送信機能（IR HAL）によって操作可否は異なります。
 
-This is a legacy Xposed API 82 module. The dependency is `compileOnly` so Xposed API classes are **not** bundled into the APK. The historical API artifact is resolved from the specified public Maven repository. The provided signed v2 APK was built separately and may not be byte-for-byte identical to a Gradle debug build.
+## 開発・ビルド
 
-## Scope and disclaimer
+Android Studio、Android SDK 35、JDK 17以上、Android Gradle Plugin 8.7.3に対応するGradle環境を使用し、`:app:assembleDebug` でビルドします。
 
-Only for compatible devices and Mi Remote 7.1.3G. Requires a functional infrared emitter / HAL. No third-party proprietary Mi Remote APK, firmware, or IR code database is redistributed in this repository. Xiaomi, Mi Remote, and TOSHIBA are trademarks of their respective owners. This is an unofficial independent compatibility module.
+Xposed API 82は `compileOnly` として指定し、APKには同梱しません。GitHubで配布する署名済みAPKは別手順でビルドしたもので、Gradleのdebugビルドと同一バイナリになるとは限りません。
+
+## 注意事項・ライセンス
+
+このリポジトリは非公式の互換性モジュールです。Mi リモートのAPK、独自ファームウェア、第三者の赤外線コードDBは再配布しません。Xiaomi、Mi Remote、TOSHIBAなどの名称はそれぞれの権利者に帰属します。
+
+ライセンス: [MIT](LICENSE)
