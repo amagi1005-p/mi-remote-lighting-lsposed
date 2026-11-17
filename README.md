@@ -7,6 +7,7 @@ This LSPosed module enables the built-in **lighting / bulb (device type ID 14)**
 ## Status / 動作状況
 
 - **v2 (0.2.0)**: User-tested: the Lighting/Bulb category appeared. An additional user report says an IR room light could be turned off using the category.
+- **Vector**: Vectorでも使用できるとの報告あり（community-reported compatibility; exact build and device combination not independently verified）.
 - Scope is limited to Mi Remote (`com.duokan.phone.remotecontroller`). **Does not modify Mi Home**, the whole-device region, or the Android IR HAL.
 - **Not verified on every ROM, version, brand, or device**. Other versions of Mi Remote may use different classes/methods. No warranty that Toshiba lighting protocols or every IR database record will work.
 
