@@ -18,7 +18,7 @@ Mi リモート **7.1.3G** に隠されている赤外線リモコンの **「�
 
 **[v1.0.0 リリースページ](https://github.com/amagi1005-p/mi-remote-lighting-lsposed/releases/tag/v1.0.0)**
 
-- [署名済みAPK（v2実装）](https://github.com/amagi1005-p/mi-remote-lighting-lsposed/releases/download/v1.0.0/IRLightLSPosed-MiRemote-7.1.3G-v2.apk)
+- [署名済みAPK（v2実装）](https://github.com/amagi1005-p/mi-remote-lighting-lsposed/releases/download/v1.0.0/IRLightLSPosed-MiRemote-7.1.3G-v1.0.0.apk)
 - [SHA-256チェックサム](releases/SHA256SUMS.txt)
 
 ## インストール
