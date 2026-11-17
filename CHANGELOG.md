@@ -6,7 +6,7 @@
 - Reveal Mi Remote 7.1.3G Lighting / Bulb category (ID 14) after application filtering
 - Scope hooks to Mi Remote only; no whole-device region spoofing
 - Reported functioning on a custom ROM and with Vector
-- Signed APK has the original v2 filename; binary unchanged
+- Signed APK is identical to the tested v2 binary; public release uses a v1.0.0 filename
 
 ## Pre-release development builds (not GitHub Releases)
 
