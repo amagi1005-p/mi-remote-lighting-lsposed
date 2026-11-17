@@ -18,7 +18,7 @@ An LSPosed compatibility module that reveals the built-in **Lighting / Bulb** in
 
 **[v1.0.0 GitHub Release](https://github.com/amagi1005-p/mi-remote-lighting-lsposed/releases/tag/v1.0.0)**
 
-- [Signed APK (v2 implementation)](https://github.com/amagi1005-p/mi-remote-lighting-lsposed/releases/download/v1.0.0/IRLightLSPosed-MiRemote-7.1.3G-v2.apk)
+- [Signed APK (v2 implementation)](https://github.com/amagi1005-p/mi-remote-lighting-lsposed/releases/download/v1.0.0/IRLightLSPosed-MiRemote-7.1.3G-v1.0.0.apk)
 - [SHA-256 checksums](releases/SHA256SUMS.txt)
 
 ## Installation
