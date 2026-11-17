@@ -1,0 +1,14 @@
+pluginManagement {
+  repositories { google(); mavenCentral(); gradlePluginPortal() }
+}
+dependencyResolutionManagement {
+  repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+  repositories {
+    google()
+    mavenCentral()
+    // Historical Xposed API 82 dependency (compileOnly); not packaged into APK
+    maven { url 'https://artifactory.appodeal.com/appodeal-public/' }
+  }
+}
+rootProject.name = 'IRLightLSPosed'
+include ':app'
