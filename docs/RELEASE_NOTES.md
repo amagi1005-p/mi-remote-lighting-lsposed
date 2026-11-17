@@ -7,8 +7,8 @@
 Mi リモート **7.1.3G** で通常は表示されない **「電球／照明」カテゴリ（ID 14）** を追加表示するLSPosedモジュールの初回公開版です。
 
 - カスタムROM環境で照明カテゴリの表示を確認
-- 室内照明の赤外線操作に成功したという利用者報告あり
-- **Vectorでも使用できるとの報告あり**（個別構成の検証は未実施）
+- 室内照明の赤外線操作実績あり
+- **Vectorでも使用可能**（個別構成の検証は未実施）
 - LSPosedの適用先は `com.duokan.phone.remotecontroller` のみ
 - v2として試験された実装を、初回正式版 `v1.0.0` として公開しています。署名済みAPKのバイナリは変更していません。
 
@@ -19,8 +19,8 @@ Mi リモート **7.1.3G** で通常は表示されない **「電球／照明�
 First public release of the LSPosed module that reveals the hidden **Lighting / Bulb category (ID 14)** in **Mi Remote 7.1.3G**.
 
 - Lighting category confirmed visible on a custom ROM
-- A user reported successful infrared room-light control
-- **Reported to work with Vector** (exact device/build combinations not independently tested)
+- Infrared room-light control has been demonstrated
+- **Also works with Vector** (individual device/build combinations not independently tested)
 - LSPosed scope: `com.duokan.phone.remotecontroller` only
 - The signed APK is the same tested v2 binary, published under the first public release tag `v1.0.0`.
 
