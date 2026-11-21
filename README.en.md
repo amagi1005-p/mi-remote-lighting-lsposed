@@ -1,6 +1,10 @@
-# Mi Remote Lighting — LSPosed Module
+# Mi Remote Lighting / Bulb Category Enabler — LSPosed Module
 
 **Language / 言語: [日本語](README.md) | [English](README.en.md)**
+
+**Missing the Lighting or Bulb category in Xiaomi Mi Remote?** This unofficial LSPosed module makes the built-in **Lighting / Bulb infrared remote category (device type ID 14)** visible in **Mi Remote 7.1.3G**, so compatible room-light remotes can be selected. The category and infrared control have been demonstrated on a custom ROM.
+
+**Important:** This is a Mi Remote category-visibility fix, **not** a new infrared-code database, universal region unlock, or infrared hardware driver. A working IR transmitter, supported remote profiles, LSPosed, and Mi Remote 7.1.3G are required.
 
 An LSPosed compatibility module that reveals the built-in **Lighting / Bulb** infrared remote category (**device type ID 14**) in **Mi Remote 7.1.3G**.
 
